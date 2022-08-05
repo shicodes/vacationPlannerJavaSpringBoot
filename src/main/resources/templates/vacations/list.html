@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rogers Communications Vacation Planner</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/evo-calendar.min.css">
+    <link rel="icon" href="assets/rogers_logo_tab.svg">
+</head>
+<body>
+<div class="header">
+    <div class="inner_header">
+        <div class="logo_container">
+            <img src="assets/logo.png" alt="logo">
+        </div>
+
+        <ul class="navigation">
+            <a><li>Team Vacation</li></a>
+            <a href="submitVacation.html"><li>Submit Vacation</li></a>
+            <a><li>My Summary</li></a>
+        </ul>
+    </div>
+</div>
+<div class="hero">
+    <div id="calendar"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="js/evo-calendar.min.js"></script>
+<script>
+		$(document).ready(function() {
+    		$('#calendar').evoCalendar({
+       			//settingName: settingValue
+		    })
+		})
+	</script>
+<table>
+    <tr>
+        <th>Employee ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Type</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Status</th>
+    </tr>
+    <tr th:each="vacation : ${vacations}">
+        <td th:text="${vacation.employee.employeeID}">123</td>
+        <td th:text="${vacation.employee.firstName}">Jane</td>
+        <td th:text="${vacation.employee.lastName}">Smith</td>
+        <td th:text="${vacation.vacationType}">Floater</td>
+        <td th:text="${vacation.vacationStart}">2022-07-12 00:00:00</td>
+        <td th:text="${vacation.vacationEnd}">2022-07-13 00:00:00</td>
+        <td th:text="${vacation.status}">Approved</td>
+    </tr>
+</table>
+
+
+</body>
+</html>

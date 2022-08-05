@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rogers Communications Vacation Planner</title>
+</head>
+<body>
+<table border="1">
+    <form>
+        <tr>
+            <th colspan="2"><h2>Vacation Request Form</h2></th>
+        </tr>
+        <tr>
+            <td>Employee ID:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Type of Time Off:</td>
+            <td><input type="radio" name="Type">Floater
+                <input type="radio" name="Type">Vacation
+                <input type="radio" name="Type">Volunteer</td>
+        </tr>
+        <tr>
+            <td>Full/Half Day:</td>
+            <td><input type="radio" name="Full_Half">Full Day
+                <input type="radio" name="Full_Half">Half Day</td>
+        </tr>
+        <tr>
+            <td>Start Date (Use for Full Days):</td>
+            <td><input type="date" id="start_vacation_full" disabled></td>
+        </tr>
+        <tr>
+            <td>End Date (Use for Full Days):</td>
+            <td><input type="date" id="end_vacation_full" disabled></td>
+        </tr>
+        <tr>
+            <td>Start DateTime (Use for Half Days):</td>
+            <td><input type="datetime-local" id="start_vacation_half" disabled></td>
+        </tr>
+        <tr>
+            <td>End DateTime (Use for Half Days):</td>
+            <td><input type="datetime-local" id="end_vacation_half" disabled></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="button" id="clear_button">Clear Form</button>
+                <button type="button" id="submit_button">Submit</button></td>
+        </tr>
+
+    </form>
+</table>
+
+</body>
+</html>
